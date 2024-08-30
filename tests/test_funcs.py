@@ -1,3 +1,5 @@
+import pytest
+
 from main.funcs import division, sum_2_digits, sum_multiple
 
 
@@ -19,4 +21,6 @@ def test_division():
     assert division(4, 2) == 2
     assert division(6, 3) == 2
     assert division(18, 3) == 6
-    assert division(1, 0) == 1
+    assert division(0, 1) == 0
+    with pytest.raises(ZeroDivisionError):
+        division(1, 0)
