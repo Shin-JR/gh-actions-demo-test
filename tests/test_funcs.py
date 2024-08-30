@@ -19,3 +19,4 @@ def test_division():
     assert division(4, 2) == 2
     assert division(6, 3) == 2
     assert division(18, 3) == 6
+    assert division(1, 0) == 1
